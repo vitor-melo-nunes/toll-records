@@ -21,7 +21,7 @@ services:
       - "4566:4566"
     environment:
       - DEFAULT_REGION=as-east-1
-      - SERVICES=sns,sqs
+      - SERVICES=sns,sqs,dynamodb
       - DEBUG=1
       - AWS_ACCESS_KEY_ID=test
       - AWS_SECRET_ACCESS_KEY=test
