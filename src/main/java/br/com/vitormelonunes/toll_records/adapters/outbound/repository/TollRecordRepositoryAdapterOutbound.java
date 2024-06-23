@@ -10,11 +10,11 @@ import org.springframework.stereotype.Component;
 import java.time.Instant;
 
 @Component
-public class tollRecordAdapterOutbound implements TollRecordPortOutbound {
+public class TollRecordRepositoryAdapterOutbound implements TollRecordPortOutbound {
 
     private final TollRecordRepository tollRecordRepository;
 
-    public tollRecordAdapterOutbound(TollRecordRepository tollRecordRepository) {
+    public TollRecordRepositoryAdapterOutbound(TollRecordRepository tollRecordRepository) {
         this.tollRecordRepository = tollRecordRepository;
     }
 

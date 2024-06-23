@@ -14,5 +14,18 @@ services:
     volumes:
       - mysql-data:/var/lib/mysql
 
+  localstack:
+    image: localstack/localstack:latest
+    container_name: localstack
+    ports:
+      - "4566:4566"
+    environment:
+      - DEFAULT_REGION=as-east-1
+      - SERVICES=sns,sqs
+      - DEBUG=1
+      - AWS_ACCESS_KEY_ID=test
+      - AWS_SECRET_ACCESS_KEY=test
+
 volumes:
   mysql-data:
+  localstack:
